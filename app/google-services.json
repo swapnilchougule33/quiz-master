@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "68571245313",
+    "project_id": "triviaquizapp2",
+    "storage_bucket": "triviaquizapp2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68571245313:android:71e20f2d53fffc8c7f8900",
+        "android_client_info": {
+          "package_name": "com.infowithvijay.triviaquizapp2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgnriwRRfZIc8BUDDQr2yTgAMmLuZbfN4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

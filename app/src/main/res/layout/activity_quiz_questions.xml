@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#00F5F5F5">
+
+        <!-- Existing Content Starts Here -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#B72196F3"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:text="Your Title Here" /> <!-- Added sample text -->
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/qbg"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="bold"
+                        android:text="प्रश्न प्रकार :"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerName"
+                        android:layout_width="0dp"
+                        android:layout_height="47dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinner_background"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:id="@+id/textViewQuestionNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="8dp"
+                        android:text="प्रश्न क्रमांक : 1"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <!-- EditText for typing the question -->
+                    <EditText
+                        android:id="@+id/editTextQuestion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/edittext_background"
+                        android:gravity="top"
+                        android:hint="प्रश्न टाइप करा"
+                        android:inputType="textMultiLine"
+                        android:lines="4"
+                        android:padding="12dp"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/black"
+                        android:textColorHint="#4B4B4B"
+                        android:textSize="18sp" />
+
+                    <!-- LinearLayout for vertical buttons -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_vertical">
+
+                        <!-- Camera Button -->
+                        <ImageButton
+                            android:id="@+id/buttonCamera"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginBottom="10dp"
+                            android:contentDescription="Take Photo"
+                            android:src="@drawable/cam_upload"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <!-- Upload Button -->
+                        <ImageButton
+                            android:id="@+id/buttonUpload"
+                            android:layout_width="35dp"
+                            android:layout_height="32dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:contentDescription="Upload File"
+                            android:src="@drawable/image_upload"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <!-- Show Photo Button -->
+                        <ImageButton
+                            android:id="@+id/buttonShow"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:contentDescription="Show Photo"
+                            android:src="@drawable/photo_show"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/optionsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="पर्याय क्र.१ :"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/editTextOption1"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="65dp"
+                            android:layout_weight="1"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/edittext_background"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:hint="Option 1"
+                            android:inputType="text"
+                            android:textColor="@color/black"
+                            android:textColorHint="#646464"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="पर्याय क्र.2 :"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/editTextOption2"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="65dp"
+                            android:layout_weight="1"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/edittext_background"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:hint="Option 2"
+                            android:inputType="text"
+                            android:textColor="@color/black"
+                            android:textColorHint="#6B6B6B"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/optionalOptionsLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="पर्याय क्र.3 :"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                            <EditText
+                                android:id="@+id/editTextOption3"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:layout_weight="1"
+                                android:layout_marginRight="8dp"
+                                android:ems="10"
+                                android:inputType="text"
+                                android:hint="Option 3"
+                                android:textColor="@color/black"
+                                android:textColorHint="#9E9B9B"
+                                android:gravity="center"
+                                android:background="@drawable/edittext_background"
+                                android:layout_marginLeft="65dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="पर्याय क्र.4 :"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                            <EditText
+                                android:id="@+id/editTextOption4"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:layout_weight="1"
+                                android:layout_marginRight="8dp"
+                                android:ems="10"
+                                android:inputType="text"
+                                android:hint="Option 4"
+                                android:textColor="@color/black"
+                                android:textColorHint="#9E9B9B"
+                                android:gravity="center"
+                                android:background="@drawable/edittext_background"
+                                android:layout_marginLeft="65dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="अचूक उत्तर पर्याय:"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black" />
+
+                    <Spinner
+                        android:id="@+id/spinnerAnswer"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinner_background"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/saveButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="#22313f"
+                        android:padding="1dp"
+                        android:text="SAVE"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <Button
+                        android:id="@+id/viewButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:backgroundTint="#22313f"
+                        android:padding="1dp"
+                        android:text="View"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:layout_margin="5dp" />
+
+                    <Button
+                        android:id="@+id/finishButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:backgroundTint="#22313f"
+                        android:padding="1dp"
+                        android:text="FINISH"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:layout_margin="5dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

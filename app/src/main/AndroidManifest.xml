@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.infowithvijay.triviaquizapp2">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!-- MainActivity as the launcher activity -->.
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Second activity: Quiz_Question -->
+        <activity
+            android:name=".Quiz_Question"
+            android:exported="true" /> <!-- Third activity: QuizGame -->
+        <activity
+            android:name=".quiz_game"
+            android:exported="true" /> <!-- Fourth activity: OptionQuiz -->
+        <activity
+            android:name=".OptionQuiz"
+            android:exported="true" /> <!-- Fifth activity: Exam -->
+        <activity
+            android:name=".Exam"
+            android:exported="true" /> <!-- Sixth activity: PlayScreen -->
+        <activity
+            android:name=".PlayScreen"
+            android:exported="true" /> <!-- Seventh activity: QuizActivity with custom intent filter -->
+        <activity
+            android:name=".QuizActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.infowithvijay.triviaquizapp2.QUIZ_ACTION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="startquiz"
+                    android:scheme="quizapp" />
+            </intent-filter>
+        </activity> <!-- Other activities -->
+        <activity android:name=".GameOver" />
+        <activity android:name=".MoneyActivity" />
+        <activity android:name=".Settings" />
+        <activity android:name=".Result" />
+        <activity android:name=".GameWon" />
+    </application>
+
+</manifest>

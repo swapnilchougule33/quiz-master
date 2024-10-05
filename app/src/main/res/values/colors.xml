@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#034272</color>
+    <color name="colorPrimaryDark">#0E2F92</color>
+    <color name="colorAccent">#EC5FD9</color>
+
+    <color name="green">#4CAF50</color>
+    <color name="red">#F44336</color>
+    <color name="background_blue">#1A237E</color>
+    <color name="white">#FFFFFF</color>
+    <color name="accent_yellow">#FFD54F</color>
+    <color name="submit_blue">#1E88E5</color>
+    <color name="light_blue">#90CAF9</color>
+    <color name="dark_blue">#0D47A1</color>
+    <color name="finish_red">#D32F2F</color>
+    <color name="question_nav_background">#283593</color>
+
+    <color name="color1">#1193D0</color>
+    <color name="color2">#0BA9BD</color>
+    <color name="dialog_border_color">#EC5FD9</color>
+
+    <color name="buttonBG">#FF9800</color>
+    <color name="money_screen_bg">#250567</color>
+    <color name="new_state_bg">#E96022</color>
+    <color name="original_state_bg">#250567</color>
+
+    <color name="transparent">#00030303</color>
+
+    <color name="light_gray">#F5F5F5</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="edgray">#5F5F5F</color>
+    <color name="black">#000000</color>
+    <color name="red2">#FF4343</color>
+    <color name="purple_500">#3F51B5</color>
+    <color name="light_brown">#48682E2A</color>
+    <color name="gold">#FFD700</color>
+    <color name="blue">#2196F3</color>
+    <color name="pastel_red">#FF7350</color>
+</resources>

@@ -1,0 +1,8 @@
+<!-- res/drawable/hexagon_shape.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#80000080"/> <!-- Transparent blue color -->
+    <corners android:radius="30dp"/>
+    <stroke
+        android:width="2dp"
+        android:color="#000080"/> <!-- Blue outline for hexagon effect -->
+</shape>

@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="12dp" />
+    <solid android:color="#D3D3D3" /> <!-- lightGray replaced with hex code #D3D3D3 -->
+    <stroke android:width="2dp" android:color="#6200EE" /> <!-- primaryColor replaced with hex code #6200EE -->
+</shape>

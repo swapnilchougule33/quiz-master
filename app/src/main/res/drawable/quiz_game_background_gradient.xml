@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base Gradient -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="45"
+                android:startColor="#4CAF50"
+                android:centerColor="#8BC34A"
+                android:endColor="#FF9800"
+                android:type="linear"
+                android:dither="true" />
+        </shape>
+    </item>
+    <!-- Overlay with Transparency -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#80FFFFFF" /> <!-- Semi-transparent white overlay -->
+        </shape>
+    </item>
+</layer-list>
