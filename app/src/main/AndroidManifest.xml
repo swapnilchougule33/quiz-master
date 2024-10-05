@@ -25,6 +25,9 @@
         <activity
             android:name=".quiz_game"
             android:exported="true" /> <!-- Fourth activity: OptionQuiz -->
+
+
+
         <activity
             android:name=".OptionQuiz"
             android:exported="true" /> <!-- Fifth activity: Exam -->
