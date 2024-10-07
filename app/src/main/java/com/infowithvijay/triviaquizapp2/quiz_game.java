@@ -25,8 +25,8 @@ public class quiz_game extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(quiz_game.this, "Ludo Clicked", Toast.LENGTH_SHORT).show();
-                // Intent intent = new Intent(quiz_game.this, LudoActivity.class);
-                // startActivity(intent);
+                 //Intent intent = new Intent(quiz_game.this, LudoActivity.class);
+                 //startActivity(intent);
             }
         });
 

@@ -10,13 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".LudoQuiz"
+            android:exported="false" />
+        <activity
+            android:name=".LudoPlayScreen"
+            android:exported="false" />
+        <activity
             android:name=".ludo_quiz"
             android:exported="false" />
         <activity
             android:name=".ludo_game"
             android:exported="false" /> <!-- MainActivity as the launcher activity -->
         <activity
-            android:name=".MainActivity"
+            android:name=".LudoPlayScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
