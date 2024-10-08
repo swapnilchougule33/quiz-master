@@ -16,6 +16,6 @@ public class LudoPlayScreen extends AppCompatActivity {
 
     public void onPlayClick(View v)
     {
-        startActivity(new Intent(getApplicationContext(), LudoPlayScreen.class));
+        startActivity(new Intent(getApplicationContext(), LudoQuiz.class));
     }
 }

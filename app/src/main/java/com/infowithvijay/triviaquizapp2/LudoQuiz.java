@@ -8,11 +8,13 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.LinearGradient;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Point;
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.graphics.Shader;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Display;
@@ -1834,10 +1836,10 @@ public class LudoQuiz extends AppCompatActivity {
                         if (pieces[i].getIsKilled()) {
                             playerBlue.getArrows(i).setY();
                             paint.setColor(Color.parseColor("#051850"));
-//                    paint.setShader(new LinearGradient(0f,0f,
-//                            0,
-//                            getHeight(),
-//                            Color.BLUE,Color.WHITE, Shader.TileMode.MIRROR));
+                    paint.setShader(new LinearGradient(0f,0f,
+                            0,
+                            getHeight(),
+                            Color.BLUE,Color.WHITE, Shader.TileMode.MIRROR));
                             canvas.drawPath( playerBlue.getArrows(i).getPath(), paint);
                         }
                     }
@@ -1907,7 +1909,7 @@ public class LudoQuiz extends AppCompatActivity {
                                     }
                                 } else if (t == Turn.GREEN) {
                                     if (rectGreen.contains((int) event.getX(), (int) event.getY())) {
-                                        Log.d("LudoActivity", "Touch X : " + event.getX() + " Touch Y : " + event.getY());
+                                        Log.d("LudoQuiz", "Touch X : " + event.getX() + " Touch Y : " + event.getY());
                                         isShuffling = true;
                                     }
                                 } else if (t == Turn.BLUE) {
@@ -1924,9 +1926,9 @@ public class LudoQuiz extends AppCompatActivity {
                                     for (int i = 0; i < pieces.length; i++) {
                                         {
                                             if (pieces[i].getCollision().contains((int) event.getX(), (int) event.getY())) {
-                                                Log.d("LudoActivity", "On Piece");
+                                                Log.d("LudoQuiz", "On Piece");
                                                 if (pieces[i].getIsKilled() == false || placeToMove == 6) {
-                                                    Log.d("LudoActivity", "Click on Yellow");
+                                                    Log.d("LudoQuiz", "Click on Yellow");
                                                     if (pieces[i].getComplete() == false) {
                                                         if (playerRed.checkCanMove(i, placeToMove)) {
                                                             isMoving = true;
@@ -1947,9 +1949,9 @@ public class LudoQuiz extends AppCompatActivity {
                                     for (int i = 0; i < pieces.length; i++) {
                                         {
                                             if (pieces[i].getCollision().contains((int) event.getX(), (int) event.getY())) {
-                                                Log.d("LudoActivity", "On Piece");
+                                                Log.d("LudoQuiz", "On Piece");
                                                 if (pieces[i].getIsKilled() == false || placeToMove == 6) {
-                                                    Log.d("LudoActivity", "Click on Yellow");
+                                                    Log.d("LudoQuiz", "Click on Yellow");
                                                     if (pieces[i].getComplete() == false) {
                                                         if (playerYellow.checkCanMove(i, placeToMove)) {
                                                             isMoving = true;
@@ -1970,9 +1972,9 @@ public class LudoQuiz extends AppCompatActivity {
                                     for (int i = 0; i < pieces.length; i++) {
                                         {
                                             if (pieces[i].getCollision().contains((int) event.getX(), (int) event.getY())) {
-                                                Log.d("LudoActivity", "On Piece");
+                                                Log.d("LudoQuiz", "On Piece");
                                                 if (pieces[i].getIsKilled() == false || placeToMove == 6) {
-                                                    Log.d("LudoActivity", "Click on Green");
+                                                    Log.d("LudoQuiz", "Click on Green");
                                                     if (pieces[i].getComplete() == false) {
                                                         if (playerGreen.checkCanMove(i, placeToMove)) {
                                                             isMoving = true;
@@ -1993,9 +1995,9 @@ public class LudoQuiz extends AppCompatActivity {
                                     for (int i = 0; i < pieces.length; i++) {
                                         {
                                             if (pieces[i].getCollision().contains((int) event.getX(), (int) event.getY())) {
-                                                Log.d("LudoActivity", "On Piece");
+                                                Log.d("LudoQuiz", "On Piece");
                                                 if (pieces[i].getIsKilled() == false || placeToMove == 6) {
-                                                    Log.d("LudoActivity", "Click on blue");
+                                                    Log.d("LudoQuiz", "Click on blue");
                                                     if (pieces[i].getComplete() == false) {
                                                         if (playerBlue.checkCanMove(i, placeToMove)) {
                                                             isMoving = true;
