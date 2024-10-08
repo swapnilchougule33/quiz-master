@@ -335,8 +335,8 @@ public class Quiz_Question extends AppCompatActivity {
     private void finishQuiz() {
         Toast.makeText(this, "Quiz finished", Toast.LENGTH_SHORT).show();
 
-        Intent intent = new Intent(this, quiz_game.class);
-        startActivity(intent);
+//        Intent intent = new Intent(this, quiz_game.class);
+//        startActivity(intent);
 
         finish();
     }

@@ -9,74 +9,63 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <!-- First activity: MainActivity as the launcher -->
+         <!-- First activity: MainActivity as the launcher -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Second activity: Quiz_Question -->
+        </activity> <!-- Second activity: Quiz_Question -->
+        <activity
+            android:name=".ChapterList"
+            android:exported="true" />
+        <activity
+            android:name=".SubjectList"
+            android:exported="true" />
         <activity
             android:name=".Quiz_Question"
-            android:exported="true" />
-
-        <!-- Third activity: QuizGame -->
+            android:exported="true" /> <!-- Third activity: QuizGame -->
         <activity
             android:name=".quiz_game"
-            android:exported="true" />
-
-        <!-- Fourth activity: LudoPlayScreen -->
+            android:exported="true" /> <!-- Fourth activity: LudoPlayScreen -->
         <activity
             android:name=".LudoPlayScreen"
-            android:exported="true" />
-
-        <!-- Fifth activity: LudoQuiz -->
+            android:exported="true" /> <!-- Fifth activity: LudoQuiz -->
         <activity
             android:name=".LudoQuiz"
-            android:exported="false" />
-
-        <!-- Sixth activity: OptionQuiz -->
+            android:exported="false" /> <!-- Sixth activity: OptionQuiz -->
         <activity
             android:name=".OptionQuiz"
-            android:exported="true" />
-
-        <!-- Seventh activity: Exam -->
+            android:exported="true" /> <!-- Seventh activity: Exam -->
         <activity
             android:name=".Exam"
-            android:exported="true" />
-
-        <!-- Eighth activity: PlayScreen -->
+            android:exported="true" /> <!-- Eighth activity: PlayScreen -->
         <activity
             android:name=".PlayScreen"
-            android:exported="true" />
-
-        <!-- Ninth activity: QuizActivity with custom intent filter -->
+            android:exported="true" /> <!-- Ninth activity: QuizActivity with custom intent filter -->
         <activity
             android:name=".QuizActivity"
             android:exported="true"
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="com.infowithvijay.triviaquizapp2.QUIZ_ACTION" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data
                     android:host="startquiz"
                     android:scheme="quizapp" />
             </intent-filter>
-        </activity>
-
-        <!-- Other activities -->
+        </activity> <!-- Other activities -->
         <activity android:name=".GameOver" />
         <activity android:name=".MoneyActivity" />
         <activity android:name=".Settings" />
         <activity android:name=".Result" />
         <activity android:name=".GameWon" />
-
     </application>
 
 </manifest>

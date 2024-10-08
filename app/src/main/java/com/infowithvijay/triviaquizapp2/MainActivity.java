@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 public class MainActivity extends AppCompatActivity {
-
     private CardView scholarship1, scholarship2, scholarship3, scholarship4, scholarship5, scholarship6, scholarship7, scholarship8;
 
     @SuppressLint("MissingInflatedId")
@@ -88,9 +87,9 @@ public class MainActivity extends AppCompatActivity {
 
     // Method to handle scholarship details page or action
     private void openScholarshipDetails(String scholarshipName) {
-        Toast.makeText(this, "Selected: " + scholarshipName, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "" + scholarshipName, Toast.LENGTH_SHORT).show();
 
-        Intent intent = new Intent(MainActivity.this, Quiz_Question.class);
+        Intent intent = new Intent(MainActivity.this, SubjectList.class);
         intent.putExtra("SCHOLARSHIP_NAME", scholarshipName);
         startActivity(intent);
     }
