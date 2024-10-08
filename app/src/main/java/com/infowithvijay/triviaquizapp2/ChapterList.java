@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +16,7 @@ public class ChapterList extends AppCompatActivity implements AdapterView.OnItem
     private ListView chapterListView;
     private String scholarshipName;
     private String subjectName;
+    private TextView subjectTitleTextView; // TextView for displaying subject title
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +24,14 @@ public class ChapterList extends AppCompatActivity implements AdapterView.OnItem
         setContentView(R.layout.activity_chapter_list);
 
         chapterListView = findViewById(R.id.chapterListView);
+        subjectTitleTextView = findViewById(R.id.subjectTitle);
 
         // Get the scholarship name and subject from the intent
         scholarshipName = getIntent().getStringExtra("scholarship");
         subjectName = getIntent().getStringExtra("subject");
+
+        // Set the subject title in the TextView
+        subjectTitleTextView.setText("विषय: " + subjectName);
 
         // Define chapter lists based on scholarship name and subject
         String[] chapters = getChaptersForSubject(scholarshipName, subjectName);
@@ -85,12 +91,11 @@ public class ChapterList extends AppCompatActivity implements AdapterView.OnItem
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         String selectedChapter = parent.getItemAtPosition(position).toString();
 
-        // Handle chapter click, e.g., open a new activity for chapter details
-        // You might want to pass the selected chapter and scholarship/subject information
-        Toast.makeText(this, "Chapter Selected: " + selectedChapter, Toast.LENGTH_SHORT).show();
+        // Pass the scholarshipName, subjectName, and selectedChapter to quiz_game activity
         Intent intent = new Intent(this, quiz_game.class);
         intent.putExtra("SCHOLARSHIP_NAME", scholarshipName);
+        intent.putExtra("subjectName", subjectName);
+        intent.putExtra("chapterName", selectedChapter); // Pass the selected chapter
         startActivity(intent);
-
     }
 }

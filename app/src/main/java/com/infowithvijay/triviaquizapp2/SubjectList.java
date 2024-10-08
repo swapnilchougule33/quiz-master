@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView; // Import TextView
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SubjectList extends AppCompatActivity implements AdapterView.OnItemClickListener {
@@ -27,7 +27,7 @@ public class SubjectList extends AppCompatActivity implements AdapterView.OnItem
         scholarshipName = getIntent().getStringExtra("SCHOLARSHIP_NAME");
 
         // Set the scholarship title in the TextView
-        scholarshipTitleTextView.setText("विषय: " + scholarshipName);
+        scholarshipTitleTextView.setText("परीक्षा: " + scholarshipName);
 
         // Define subject lists based on scholarship name
         String[] subjects = getSubjectsForScholarship(scholarshipName);
@@ -44,23 +44,23 @@ public class SubjectList extends AppCompatActivity implements AdapterView.OnItem
 
     private String[] getSubjectsForScholarship(String scholarshipName) {
         if (scholarshipName.equals("इ.५वी स्कॉलरशिप परीक्षा")) {
-            return new String[]{"Maths", "Science", "English", "Hindi"};
+            return new String[]{"गणित", "विज्ञान", "English", "हिन्दी"};
         } else if (scholarshipName.equals("इ.५वी नवोदय परीक्षा")) {
-            return new String[]{"Maths", "Science", "English", "Hindi"};
+            return new String[]{"गणित", "विज्ञान", "English", "हिन्दी"};
         } else if (scholarshipName.equals("इ.६वी होमी भाभा स्पर्धा परीक्षा")) {
-            return new String[]{"Science", "Maths"};
+            return new String[]{"Science", "गणित"};
         } else if (scholarshipName.equals("इ.८वी स्कॉलरशिप परीक्षा")) {
-            return new String[]{"Maths", "Science", "English", "Hindi"};
+            return new String[]{"गणित", "विज्ञान", "English", "हिन्दी"};
         } else if (scholarshipName.equals("इ.८वी नवोदय परीक्षा")) {
-            return new String[]{"Maths", "Science", "English", "Hindi"};
+            return new String[]{"गणित", "विज्ञान", "English", "हिन्दी"};
         } else if (scholarshipName.equals("इ.९वी होमी भाभा स्पर्धा परीक्षा")) {
-            return new String[]{"Science", "Maths"};
+            return new String[]{"Science", "गणित"};
         } else if (scholarshipName.equals("NMMS स्पर्धा परीक्षा")) {
-            return new String[]{"Maths", "Science", "Social Studies", "English", "Hindi"};
+            return new String[]{"गणित", "विज्ञान", "सामाजिक अभ्यास", "English", "हिन्दी"};
         } else if (scholarshipName.equals("MTS स्पर्धा परीक्षा")) {
-            return new String[]{"General Awareness", "Maths", "Reasoning"};
+            return new String[]{"सामान्य जागरूकता", "गणित", "तर्क"};
         } else {
-            return new String[]{"No Subjects Found"};
+            return new String[]{"कोणतेही विषय सापडले नाहीत"};
         }
     }
 
